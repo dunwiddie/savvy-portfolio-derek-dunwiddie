@@ -1,0 +1,24 @@
+{
+  "name": "DerekDunwiddie",
+  "version": "1.0.0",
+  "description": "![Derek Dunwiddie Profile Img](https://avatars2.githubusercontent.com/u/37190215?s=460&v=4)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunwiddie/savvy-portfolio-derek-dunwiddie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunwiddie/savvy-portfolio-derek-dunwiddie/issues"
+  },
+  "homepage": "https://github.com/dunwiddie/savvy-portfolio-derek-dunwiddie#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "parcel-bundler": "^1.10.3"
+  }
+}
