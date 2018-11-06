@@ -1,0 +1,38 @@
+body {
+    font-family: monospace;
+    color: #F2F3F4;
+}
+
+h1 {
+    color: #07c4dd;
+    font-style: oblique;
+}
+
+#navigation {
+    background-color: #73683B;
+}
+
+#header {
+    background-color: #010203;
+    padding: 20px;
+}
+
+#content {
+    background-color: #001C3D;
+}
+
+#footer {
+    background-color: #583E23;
+}
+
+.code {
+    color: rgba(0, 0, 00, 75%);
+    background-color: #F2F3F4;
+}
+
+#personalPhoto {
+    display: block;
+    width: 200px;
+    border-radius: 100%;
+    margin: 20px auto;
+}
