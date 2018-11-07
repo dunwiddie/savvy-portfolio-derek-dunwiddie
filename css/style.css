@@ -30,9 +30,15 @@ h1 {
     background-color: #F2F3F4;
 }
 
+.container {
+    max-width: 960px;
+    margin: 0 auto;   
+}
+
 #personalPhoto {
     display: block;
-    width: 200px;
+    width: 40%;
+    max-width: 200px;
     border-radius: 100%;
-    margin: 20px auto;
+    margin: 1.5em auto;
 }
