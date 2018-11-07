@@ -1,38 +1,59 @@
+* {
+    --solarbase03: #002b36;
+    --solarbase02: #073642;
+    --solarbase01: #586e75;
+    --solarbase00: #657b83;
+    --solarbase0: #839496;
+    --solarbase1: #93a1a1;
+    --solarbase2: #eee8d5;
+    --solarbase3: #fdf6e3;
+    --solaryellow: #b58900;
+    --solarorange: #cb4b16;
+    --solarred: #dc322f;
+    --solarmagenta: #d33682;
+    --solarviolet: #6c71c4;
+    --solarblue: #268bd2;
+    --solarcyan: #2aa198;
+    --solargreen: #859900;
+    --savvyblue: #07c4dd;
+}
+
 body {
     font-family: monospace;
-    color: #F2F3F4;
+    color: var(--solarbase0);
 }
 
 h1 {
-    color: #07c4dd;
+    color: var(--savvyblue);
     font-style: oblique;
 }
 
-#navigation {
-    background-color: #73683B;
-}
-
 #header {
-    background-color: #010203;
+    background-color: var(--solarbase03);
     padding: 20px;
 }
 
 #content {
-    background-color: #001C3D;
+    background-color: var(--solarbase03);
 }
 
 #footer {
-    background-color: #583E23;
+    background-color: var(--solarbase02);
 }
 
 .code {
-    color: rgba(0, 0, 00, 75%);
-    background-color: #F2F3F4;
+    color: var(--solarbase00);
+    background-color: var(--solarbase3);
 }
 
 .container {
     max-width: 960px;
-    margin: 0 auto;   
+    margin: 0 auto;
+}
+
+#content .news {
+    color: var(--solarbase00);
+    background-color: var(--solarbase3);
 }
 
 #personalPhoto {
@@ -41,4 +62,31 @@ h1 {
     max-width: 200px;
     border-radius: 100%;
     margin: 1.5em auto;
+}
+
+/* Navigation Bar */
+
+#navigation {
+    background-color: var(--solarbase03);
+}
+
+#navigation>ul>li {
+    display: inline;
+}
+
+#navigation .dropdown {
+    display: none;
+}
+
+#navigation a:hover + .dropdown {
+    display: block;
+}
+
+#navigation a {
+    color: var(--solarblue);
+}
+
+#navigation a:hover {
+    background-color: var(--solarbase2);
+    font-style: italic;
 }
