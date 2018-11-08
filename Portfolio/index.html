@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Project | Derek Dunwiddie</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="navigation">
+        <ul class="container">
+            <li><a href="./">home</a></li>
+        </ul>
+    </div>
+    <div id="header">
+        <div class="container">
+            <h1>derek(dot)project</h1>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <div id="console">
+                <p>Behind-the-Scenes Variables</p>
+                <ul>
+                    <li>Refresh Rate</li>
+                    <li>Current Datetime</li>
+                    <li>User Authenticiated</li>
+                </ul>
+            </div>
+            <div id="menu">
+                <button>Open Edit Pane</button>
+                <button>Cycle View</button>
+                <button>New Task</button>
+                <button>View Open Tasks</button>
+                <button>View User Settings: Locked Time, Categories, Etc.</button>
+                <button>Change Appearance: Priority Colors, Theme, Etc.</button>
+            </div>
+            <div id="editpane">
+                <button>Edit</button>
+                <button>Save</button>
+                <button>Delete</button>
+            </div>
+            <div class="dayview">
+                <div class="day">
+                    <div class="hour">
+                        <div class="quarter">
+                            <div class="twentieth">
+                                12:01am to 12:05am<br>
+                                {{ hr00.min00.start }} to {{ hr00.min00.end }}
+                            </div>
+                            <div class="twentieth">
+                                12:06am to 12:10am<br>
+                                {{ hr00.min05.start }} to {{ hr00.min05.end }}
+                            </div>
+                            <div class="twentieth">
+                                12:11am to 12:15am<br>
+                                {{ hr00.min10.start }} to {{ hr00.min10.end }}
+                            </div>
+                        </div>
+                        <div class="quarter">
+                            <div class="twentieth">
+                                {{ hr00.min15.start }} to {{ hr00.min15.end }}
+                            </div>
+                            <div class="twentieth"></div>
+                            <div class="twentieth"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="micromonth"></div>
+            <div id="construction">
+                <form action="ACTION" method="post">
+                    Task Name: <input type="text" name="taskname" id="taskname"><br>
+                    Start Time: <input type="datetime-local" name="tasktime" id="tasktime"><br>
+                    Deadline: <input type="datetime-local" name="taskdeadline" id="taskdeadline"><br>
+                    Priority: <input type="number" name="taskpriority" id="taskpriority"><br>
+                    Effort: <input type="number" name="taskeffort" id="taskeffort"><br>
+                    Lock? : <input type="checkbox" name="tasklock" id="tasklock"><br>
+                    Description: <input type="text" name="taskdesc" id="taskdesc"><br>
+                    Categories/Tags: <input type="text" name="taskcat" id="taskcat"><br>
+                    Attachment: <input type="file" name="taskattach" id="taskattach"><br>
+                    Submit: <button type="submit">Create New Task</button>
+                </form>
+            </div>    
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+
+        </div>
+    </div>
+</body>
+</html>
