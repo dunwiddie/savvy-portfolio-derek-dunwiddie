@@ -9,9 +9,17 @@
 </head>
 <body>
     <div id="navigation">
-        <div class="container">
-
-        </div>
+        <ul class="container">
+            <li><a href="../">home</a></li>
+            <li><a href="../contact">contact</a></li>
+            <li><a href="../projects">projects</a>
+                <ul class="dropdown">
+                    <li><a href="./projects/portfolio">portfolio</a></li>
+                    <li><a href="./projects/">second</a></li>
+                    <li><a href="./projects/">third</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
     <div id="header">
         <div class="container">
@@ -27,11 +35,11 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eum labore nulla perferendis, sed harum, accusantium, enim amet molestiae inventore blanditiis quidem quis cupiditate eaque in. Laboriosam consequuntur neque officiis.</p>
             </div>
             <div class="news">
-                    <h2>{{ title }}</h2>
-                    <p class=code>{{ path }}</p>
-                    <p>{{ content }}</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eum labore nulla perferendis, sed harum, accusantium, enim amet molestiae inventore blanditiis quidem quis cupiditate eaque in. Laboriosam consequuntur neque officiis.</p>
-                </div>
+                <h2>{{ title }}</h2>
+                <p class=code>{{ path }}</p>
+                <p>{{ content }}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eum labore nulla perferendis, sed harum, accusantium, enim amet molestiae inventore blanditiis quidem quis cupiditate eaque in. Laboriosam consequuntur neque officiis.</p>
+            </div>
         </div>
     </div>
     <div id="footer">
