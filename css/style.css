@@ -1,108 +1,109 @@
 /* Variables for Colors: Solarized, Savvy Coders, etc. */
 
 * {
-    --solarbase03: #002b36;
-    --solarbase02: #073642;
-    --solarbase01: #586e75;
-    --solarbase00: #657b83;
-    --solarbase0: #839496;
-    --solarbase1: #93a1a1;
-    --solarbase2: #eee8d5;
-    --solarbase3: #fdf6e3;
-    --solaryellow: #b58900;
-    --solarorange: #cb4b16;
-    --solarred: #dc322f;
-    --solarmagenta: #d33682;
-    --solarviolet: #6c71c4;
-    --solarblue: #268bd2;
-    --solarcyan: #2aa198;
-    --solargreen: #859900;
-    --savvyblue: #07c4dd;
+	--solarbase03: #002b36;
+	--solarbase02: #073642;
+	--solarbase01: #586e75;
+	--solarbase00: #657b83;
+	--solarbase0: #839496;
+	--solarbase1: #93a1a1;
+	--solarbase2: #eee8d5;
+	--solarbase3: #fdf6e3;
+	--solaryellow: #b58900;
+	--solarorange: #cb4b16;
+	--solarred: #dc322f;
+	--solarmagenta: #d33682;
+	--solarviolet: #6c71c4;
+	--solarblue: #268bd2;
+	--solarcyan: #2aa198;
+	--solargreen: #859900;
+	--savvyblue: #07c4dd;
 }
 
 /* Common Element and Class Styling */
 
 body {
-    font-family: monospace;
-    color: var(--solarbase0);
-    margin: 0;
+	font-family: monospace;
+	color: var(--solarbase0);
+	margin: 0;
 }
 
 h1 {
-    color: var(--savvyblue);
-    font-style: oblique;
+	color: var(--savvyblue);
+	font-style: oblique;
 }
 
 .code {
-    color: var(--solarbase00);
-    background-color: var(--solarbase3);
+	color: var(--solarbase00);
+	background-color: var(--solarbase3);
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 #header {
-    background-color: var(--solarbase03);
-    padding: 20px;
+	background-color: var(--solarbase03);
+	padding: 20px;
 }
 
 #content {
-    background-color: var(--solarbase03);
+	background-color: var(--solarbase03);
 }
 
 #footer {
-    background-color: var(--solarbase02);
+	background-color: var(--solarbase02);
 }
 
 #content .news {
-    color: var(--solarbase00);
-    background-color: var(--solarbase3);
+	color: var(--solarbase00);
+	background-color: var(--solarbase3);
 }
 
 /* Home IDs */
 
 #personalPhoto {
-    display: block;
-    width: 40%;
-    max-width: 200px;
-    border-radius: 100%;
-    margin: 1.5em auto;
+	display: block;
+	width: 40%;
+	max-width: 200px;
+	border-radius: 100%;
+	margin: 1.5em auto;
 }
 
 /* Navigation Bar */
 
 #navigation {
-    background-color: var(--solarbase03);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+	background-color: var(--solarbase03);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
 }
 
 #navigation>ul>li {
-    display: inline;
-    position: relative;
-    padding: 25px;
+	display: inline;
+	position: relative;
+	padding: 10px;
 }
 
 #navigation .dropdown {
-    display: none;
-    position: absolute;
-    top: em;
-    left: 0;
+	display: none;
+	position: absolute;
+	top: 2.25em;
+	left: 0;
 }
 
-#navigation a:hover+.dropdown, #navigation a+.dropdown:hover {
-    display: block;
+#navigation a:hover+.dropdown,
+#navigation a+.dropdown:hover {
+	display: block;
 }
 
 #navigation a {
-    color: var(--solarblue);
+	color: var(--solarblue);
 }
 
 #navigation a:hover {
-    background-color: var(--solarbase2);
-    font-style: italic;
+	background-color: var(--solarbase2);
+	font-style: italic;
 }
