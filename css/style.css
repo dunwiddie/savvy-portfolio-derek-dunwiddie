@@ -25,6 +25,7 @@
 body {
     font-family: monospace;
     color: var(--solarbase0);
+    margin: 0;
 }
 
 h1 {
@@ -55,7 +56,6 @@ h1 {
     background-color: var(--solarbase02);
 }
 
-
 #content .news {
     color: var(--solarbase00);
     background-color: var(--solarbase3);
@@ -75,17 +75,26 @@ h1 {
 
 #navigation {
     background-color: var(--solarbase03);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
 }
 
 #navigation>ul>li {
     display: inline;
+    position: relative;
+    padding: 25px;
 }
 
 #navigation .dropdown {
     display: none;
+    position: absolute;
+    top: em;
+    left: 0;
 }
 
-#navigation a:hover + .dropdown {
+#navigation a:hover+.dropdown, #navigation a+.dropdown:hover {
     display: block;
 }
 
