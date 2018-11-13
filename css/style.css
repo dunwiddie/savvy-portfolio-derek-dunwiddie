@@ -25,12 +25,11 @@
 body {
 	font-family: monospace;
 	color: var(--solarbase0);
-	margin: 0;
 }
 
 h1 {
+	font-family: 'Unica One', monospace;
 	color: var(--savvyblue);
-	font-style: oblique;
 }
 
 .code {
@@ -81,16 +80,24 @@ h1 {
 	width: 100vw;
 }
 
+#navigation ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+}
+
 #navigation>ul>li {
 	display: inline;
+	margin: 10px 5px;
 	position: relative;
-	padding: 10px;
 }
 
 #navigation .dropdown {
 	display: none;
 	position: absolute;
-	top: 2.25em;
+	top: 1.5em;
 	left: 0;
 }
 
