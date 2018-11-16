@@ -1,5 +1,9 @@
 /* Variables for Colors: Solarized, Savvy Coders, etc. */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Kumar+One');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 * {
 	--solarbase03: #002b36;
 	--solarbase02: #073642;
@@ -17,14 +21,17 @@
 	--solarblue: #268bd2;
 	--solarcyan: #2aa198;
 	--solargreen: #859900;
-	--savvyblue: #07c4dd;
+    --savvyblue: #07c4dd;
+    --sansserif: 'Montserrat', sans-serif;
+    --cursive: 'Kumar One', cursive;
+    --monospace: 'VT323', monospace;
 }
 
 /* Common Element and Class Styling */
 
 body {
 	background-color: var(--solarbase03);
-	font-family: monospace;
+	font-family: var(--sansserif);
 	color: var(--solarbase0);
 	display: grid;
 	grid-template-rows: min-content min-content auto min-content;
@@ -37,13 +44,16 @@ body {
 }
 
 h1 {
-	font-family: 'Unica One', monospace;
+	font-family: var(--cursive);
 	color: var(--savvyblue);
 }
 
 .code {
 	color: var(--solarbase00);
 	background-color: var(--solarbase3);
+	font-family: var(--monospace);
+	letter-spacing: 0.25em;
+	padding: 0 1.5em;
 }
 
 .container {
@@ -62,6 +72,15 @@ h1 {
 #footer {
 	grid-area: footer;
 	background-color: var(--solarbase02);
+	padding: 0 10px;
+}
+
+#footer ul {
+	padding-inline-start: 0;
+}
+
+#footer .contact li {
+	list-style: none;
 }
 
 #content .news {
