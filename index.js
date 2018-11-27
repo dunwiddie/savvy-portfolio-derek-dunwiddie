@@ -1,13 +1,14 @@
-var userName = prompt("What's your name?");
+import Content from './src/Content';
+import Footer from './src/Footer';
+import Header from './src/Header';
+import Navigation from './src/Navigation';
+import greet from './src/Greet';
 
-var greet = function greet(){
-    if(!userName.trim()){
-        userName = prompt("But really. What's your name?");
-        greet();
-    }
-    else{
-        alert('Hello, ' + userName + '!');
-    }
-};
+document.querySelector('#root').innerHTML = `
+    ${Navigation}
+    ${Header}
+    ${Content}
+    ${Footer}
+`;
 
 greet();
