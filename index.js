@@ -1,8 +1,8 @@
 import Content from './src/Content';
 import Footer from './src/Footer';
+import greet from './src/Greeting';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
-import greet from './src/Greet';
 
 document.querySelector('#root').innerHTML = `
     ${Navigation}
