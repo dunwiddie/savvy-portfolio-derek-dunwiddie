@@ -11,9 +11,6 @@ export default function Footer(){
                     <li><a href="./projects/">third</a></li>
                 </ul>
             </li>
-            <li><a href="#">Extra</a></li>
-            <li><a href="#">Extra</a></li>
-            <li><a href="#">Extra</a></li>
         </ul>
     </div>
     `;

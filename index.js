@@ -4,16 +4,47 @@ import greet from './src/Greeting';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
 
-var state = {
-    'title': 'Savvy Coders Portfolio Project',
-
+var links;
+var State = {
+    'active': 'home',
+    'home': {
+        'title': 'Savvy Coders Portfolio Project',
+        'links': [ 'blog', 'contact', 'projects' ],
+    },
+    'blog': {
+        'title': 'derek(dot)blog',
+    },
+    'contact': {
+        'title': 'derek(dot)contact',
+    },
+    'projects': {
+        'title': 'derek(dot)projects',
+    }
 };
+var root = document.querySelector('#root');
 
-document.querySelector('#root').innerHTML = `
-    ${Navigation(state)}
-    ${Header(state)}
-    ${Content(state)}
-    ${Footer(state)}
-`;
+function handleNavigation(event){
+    event.preventDefault();
+    console.log(event.target.textContent);
+    State.active = event.target.textContent;
+    render(State); // eslint-disable-line
+}
 
-greet();
+function render(state){
+    root.innerHTML = `
+        ${Navigation(state)}
+        ${Header(state)}
+        ${Content(state)}
+        ${Footer(state)}
+        `;
+
+    greet();
+
+    links = document.querySelectorAll('#navigation a');
+
+    links[0].addEventListener('click', handleNavigation);
+    links[1].addEventListener('click', handleNavigation);
+    links[2].addEventListener('click', handleNavigation);
+}
+
+render(State);
