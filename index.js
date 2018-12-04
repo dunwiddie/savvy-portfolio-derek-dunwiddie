@@ -4,7 +4,6 @@ import greet from './src/Greeting';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
 
-var links;
 var State = {
     'active': 'home',
     'home': {
@@ -13,14 +12,18 @@ var State = {
     },
     'blog': {
         'title': 'derek(dot)blog',
+        'links': [ 'home', 'contact', 'projects' ],
     },
     'contact': {
         'title': 'derek(dot)contact',
+        'links': [ 'home', 'blog', 'projects' ],
     },
     'projects': {
         'title': 'derek(dot)projects',
+        'links': [ 'home', 'blog', 'contact' ],
     }
 };
+
 var root = document.querySelector('#root');
 
 function handleNavigation(event){
@@ -31,6 +34,8 @@ function handleNavigation(event){
 }
 
 function render(state){
+    var links;
+
     root.innerHTML = `
         ${Navigation(state)}
         ${Header(state)}
@@ -42,9 +47,9 @@ function render(state){
 
     links = document.querySelectorAll('#navigation a');
 
-    links[0].addEventListener('click', handleNavigation);
-    links[1].addEventListener('click', handleNavigation);
-    links[2].addEventListener('click', handleNavigation);
+    for(let i = 0; i < links.length; i++){
+        links[i].addEventListener('click', handleNavigation);
+    }
 }
 
 render(State);
