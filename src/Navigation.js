@@ -1,10 +1,18 @@
+import { capitalize } from 'lodash';
+
 function buildLinks(links){
+    var link = '';
     var list = '';
 
+
     for(let i = 0; i < links.length; i++){
+        if(links[i] !== 'home'){
+            link = links[i];
+        }
+
         list += `
           <li>
-              <a href="#">${links[i]}</a>
+              <a href="/${link}" data-navigo>${capitalize(links[i])}</a>
           </li>
         `;
     }

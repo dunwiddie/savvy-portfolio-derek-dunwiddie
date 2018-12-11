@@ -3,6 +3,10 @@ import Footer from './src/Footer';
 import greet from './src/Greeting';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
+import Navigo from 'navigo';
+
+var router = new Navigo(window.location.origin); // constructor, create new client-side router
+// alternative to History API or window.location
 
 var State = {
     'active': 'home',
@@ -26,16 +30,12 @@ var State = {
 
 var root = document.querySelector('#root');
 
-function handleNavigation(event){
-    event.preventDefault();
-    console.log(event.target.textContent);
-    State.active = event.target.textContent;
+function handleNavigation(params){
+    State.active = params.page;
     render(State); // eslint-disable-line
 }
 
 function render(state){
-    var links;
-
     root.innerHTML = `
         ${Navigation(state)}
         ${Header(state)}
@@ -45,11 +45,10 @@ function render(state){
 
     greet();
 
-    links = document.querySelectorAll('#navigation a');
-
-    for(let i = 0; i < links.length; i++){
-        links[i].addEventListener('click', handleNavigation);
-    }
+    router.updatePageLinks();
 }
 
-render(State);
+router
+    .on('/:page', handleNavigation)
+    .on('/', () => handleNavigation({ 'page': 'home' }))
+    .resolve();
