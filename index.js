@@ -4,11 +4,13 @@ import greet from './src/Greeting';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
 import Navigo from 'navigo';
+import Store from './src/Store';
 
-var router = new Navigo(window.location.origin); // constructor, create new client-side router
-// alternative to History API or window.location
+var router = new Navigo(window.location.origin);
+var root = document.querySelector('#root');
 
 var State = {
+    'posts': [],
     'active': 'home',
     'home': {
         'title': 'Savvy Coders Portfolio Project',
@@ -28,11 +30,14 @@ var State = {
     }
 };
 
-var root = document.querySelector('#root');
+var store = new Store(State);
 
 function handleNavigation(params){
-    State.active = params.page;
-    render(State); // eslint-disable-line
+    store.dispatch((state) => {
+        state.active = params.page;
+
+        return state;
+    });
 }
 
 function render(state){
@@ -48,7 +53,17 @@ function render(state){
     router.updatePageLinks();
 }
 
+store.addListener(render);
+
 router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => response.json())
+    .then((posts) => store.dispatch((state) => {
+        state.posts = posts;
+
+        return state;
+    }));

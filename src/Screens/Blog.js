@@ -1,16 +1,11 @@
-export default function Blog(){
+import Post from '../Post';
+
+export default function Blog(state){
     return `
-        <div class="post">
-            <h2>{{ title }}</h2>
-            <p class=code>{{ path }}</p>
-            <p>{{ content }}</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eum labore nulla perferendis, sed harum, accusantium, enim amet molestiae inventore blanditiis quidem quis cupiditate eaque in. Laboriosam consequuntur neque officiis.</p>
-        </div>
-        <div class="news">
-            <h2>{{ title }}</h2>
-            <p class=code>{{ path }}</p>
-            <p>{{ content }}</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eum labore nulla perferendis, sed harum, accusantium, enim amet molestiae inventore blanditiis quidem quis cupiditate eaque in. Laboriosam consequuntur neque officiis.</p>
-        </div>
+        <div id="blog">
+            <h2>Blog</h2>
+            <p>A pile of opinions, content, and junk</p>
+            ${state.posts.map((post) => Post(post)).join('<hr>')}
+        </div>    
     `;
 }
